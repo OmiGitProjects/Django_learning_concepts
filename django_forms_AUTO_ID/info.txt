@@ -1,0 +1,5 @@
+includes 
+1 Forms Module
+2 Arguments like auto_id, label_suffix, initial
+
+eg: form = RegisterForm(auto_id='Onkar_%s', label_suffix=' -- ', initial={'name': 'Onkar Nardekar', 'email': 'username@gmail.com'})

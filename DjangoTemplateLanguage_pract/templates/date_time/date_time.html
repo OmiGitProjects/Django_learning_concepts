@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link_styles %} 
+<link rel="stylesheet" href="{% static 'css/styles_date.css' %}">
+{% endblock link_styles %}
+
+{% block Content %}
+
+<div class="main">
+    <div class="header">
+
+        <div class="head mt-3">
+            <h3 class="text-danger display-4 text-center">Django Template Language</h3>
+            <hr>
+        </div>
+    </div>
+
+
+    <div class="display_filter mt-4">
+        <div class="head_2">
+            <h5 class="text-success">❤️ Date and Time Filters</h5>
+        </div>
+        <table class="table mb-5 text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Filter</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for date_filter in date_filters %}
+                <tr>
+                    <td>{{ date_filter.filter_name }}</td>
+                    <td>{{ date_filter.description }}</td>
+                    <td>{{ date_filter.example }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="head_2">
+            <h5 class="text-success">❤️ Days Filters</h5>
+        </div>
+        <table class="table mb-5 text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Filter</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for day in days %}
+                <tr>
+                    <td>{{ day.format_char }}</td>
+                    <td>{{ day.description }}</td>
+                    <td>{{ day.example }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="head_2">
+            <h5 class="text-success">❤️ Week</h5>
+        </div>
+        <table class="table mb-5 text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Filter</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ week.format_char }}</td>
+                    <td>{{ week.description }}</td>
+                    <td>{{ week.example }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="head_2">
+            <h5 class="text-success">❤️ Months Filter</h5>
+        </div>
+        <table class="table mb-5 text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Filter</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for month in months %}
+                <tr>
+                    <td>{{ month.format_char }}</td>
+                    <td>{{ month.description }}</td>
+                    <td>{{ month.example }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="head_2">
+            <h5 class="text-success">❤️ Year Filter</h5>
+        </div>
+        <table class="table mb-5 text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Filter</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for year in years %}
+                <tr>
+                    <td>{{ year.format_char }}</td>
+                    <td>{{ year.description }}</td>
+                    <td>{{ year.example }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="head_2">
+            <h5 class="text-success">❤️ Time Filter</h5>
+        </div>
+        <table class="table mb-5 text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Filter</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for time_filter in time_filters %}
+                <tr>
+                    <td>{{ time_filter.format_char }}</td>
+                    <td>{{ time_filter.description }}</td>
+                    <td>{{ time_filter.example }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="head_2">
+            <h5 class="text-success">❤️ Predefined Format Filter</h5>
+        </div>
+        <table class="table mb-5 text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Filter</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for predefined_format in predefined_formats %}
+                <tr>
+                    <td>{{ predefined_format.format_char }}</td>
+                    <td>{{ predefined_format.description }}</td>
+                    <td>{{ predefined_format.example }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock Content %}

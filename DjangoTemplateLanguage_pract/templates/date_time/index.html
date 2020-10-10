@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block Content %}
+
+<div class="main">
+    <div class="header">
+
+        <div class="head mt-3">
+            <h3 class="text-danger display-4 text-center">Django Template Language</h3>
+            <hr>
+        </div>
+
+    </div>
+
+    <div class="content_section">
+
+        <div class="date_time">
+            <div class="row mt-5">
+                <div class="col-sm-6 col-lg-6 col-md-12">
+                    <h3 class="text-success">Django Date and Time Filter : </h3>
+                    <p class="text-secondary">The date filter formats Python datetime objects and only works if the
+                        variable is this type of Python object. The date filter uses a string to specify a format. For
+                        example, if a variable contains a datetime object with the date 01/01/2018, the filter statement
+                        {{variable|date:"F jS o"}} outputs January 1st 2018.</p>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-md-12 text-center"><br>
+                    <a href="{% url 'date_time' %}" class="btn btn-danger">Date and Time Filter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="date_time">
+            <div class="row mt-5">
+                <div class="col-sm-6 col-lg-6 col-md-12">
+                    <h3 class="text-success">Template Inheritance : </h3>
+                    <p class="text-secondary">Another nice thing Django has for you is template extending. What does this mean? It means that you can use the same parts of your HTML for different pages of your website.
+                        Templates help when you want to use the same information or layout in more than one place. You don't have to repeat yourself in every file. And if you want to change something, you don't have to do it in every template, just one!</p>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-md-12 text-center"><br>
+                    <a href="{% url 'date_time' %}" class="btn btn-danger">Extends Tag</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="date_time">
+            <div class="row mt-5">
+                <div class="col-sm-6 col-lg-6 col-md-12">
+                    <h3 class="text-success">Template Include Tag : </h3>
+                    <p class="text-secondary">This article revolves about how to use include tag in Templates. include tag loads a template and renders it with the current context. This is a way of “including” other templates within a template. The template name can either be a variable or a hard-coded (quoted) string, in either single or double quotes.</p>
+                </div>
+                <div class="col-sm-6 col-lg-6 col-md-12 text-center"><br>
+                    <a href="{% url 'date_time' %}" class="btn btn-danger">Include Tag</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock Content %}
